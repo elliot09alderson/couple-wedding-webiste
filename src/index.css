@@ -1,0 +1,256 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Great+Vibes&family=Italiana&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+
+@theme {
+  --color-primary-50: #fdf8f6;
+  --color-primary-100: #f9ebe5;
+  --color-primary-200: #f5d7cb;
+  --color-primary-300: #e8b4a0;
+  --color-primary-400: #d98b6b;
+  --color-primary-500: #c8694a;
+  --color-primary-600: #b5543b;
+  --color-primary-700: #974432;
+  --color-primary-800: #7c3a2d;
+  --color-primary-900: #663429;
+  
+  --color-rose-50: #fff1f2;
+  --color-rose-100: #ffe4e6;
+  --color-rose-200: #fecdd3;
+  --color-rose-300: #fda4af;
+  --color-rose-400: #fb7185;
+  --color-rose-500: #f43f5e;
+  --color-rose-600: #e11d48;
+  --color-rose-700: #be123c;
+  --color-rose-800: #9f1239;
+  --color-rose-900: #881337;
+  
+  --color-gold-50: #fffdf7;
+  --color-gold-100: #fefaeb;
+  --color-gold-200: #fcf2cc;
+  --color-gold-300: #f9e8a3;
+  --color-gold-400: #f5d466;
+  --color-gold-500: #e9bc30;
+  --color-gold-600: #d19a1c;
+  --color-gold-700: #ad7618;
+  --color-gold-800: #8d5d1a;
+  --color-gold-900: #754c19;
+  
+  --color-sage-50: #f8faf6;
+  --color-sage-100: #eef3eb;
+  --color-sage-200: #dce7d5;
+  --color-sage-300: #bdd4b0;
+  --color-sage-400: #97ba84;
+  --color-sage-500: #74a060;
+  --color-sage-600: #5a834a;
+  --color-sage-700: #47683c;
+  --color-sage-800: #3b5533;
+  --color-sage-900: #31462b;
+  
+  --color-cream: #faf7f4;
+  --color-ivory: #fffff0;
+
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Cormorant Garamond', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-display: 'Italiana', serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s ease-in-out infinite;
+  --animate-fade-in: fadeIn 1s ease-in-out;
+  --animate-slide-up: slideUp 0.8s ease-out;
+  --animate-sparkle: sparkle 2s linear infinite;
+  --animate-gradient: gradient 8s ease infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    color: #1f2937;
+    -webkit-font-smoothing: antialiased;
+    background: linear-gradient(135deg, #fdf8f6 0%, #faf7f4 50%, #fffff0 100%);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    padding: 0.75rem 2rem;
+    background: linear-gradient(to right, #fb7185, #f43f5e);
+    color: white;
+    font-family: var(--font-serif);
+    font-weight: 500;
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    padding: 0.75rem 2rem;
+    border: 2px solid #fb7185;
+    color: #f43f5e;
+    font-family: var(--font-serif);
+    font-weight: 500;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #fff1f2;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .section-title {
+    font-family: var(--font-script);
+    font-size: 3rem;
+    color: #e11d48;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 3.75rem;
+    }
+  }
+  
+  .section-subtitle {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: #4b5563;
+    text-align: center;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .event-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    transition: all 0.5s ease;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #fecdd3;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: var(--font-sans);
+  }
+  
+  .input-field:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #fb7185;
+  }
+  
+  .floating-heart {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #f43f5e, #ec4899, #e11d48);
+  }
+  
+  .bg-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f43f5e' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdf8f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #fda4af, #fb7185);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fb7185, #f43f5e);
+}
+
+/* Decorative Elements */
+.ornament::before,
+.ornament::after {
+  content: '❧';
+  color: #fda4af;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+/* Ring Animation */
+@keyframes ring-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.ring-animation {
+  animation: ring-pulse 2s ease-in-out infinite;
+}
