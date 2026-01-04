@@ -1,18 +1,18 @@
 // Wedding Couple Information
 export const coupleInfo = {
   bride: {
-    name: "Priya",
-    fullName: "Priya Sharma",
+    name: "Yashaswi",
+    fullName: "Yashaswi Sahu",
     about: "A passionate artist with a love for travel and music. She believes in spreading love and joy everywhere she goes.",
     image: "/images/bride.jpg"
   },
   groom: {
-    name: "Arjun",
-    fullName: "Arjun Kapoor",
+    name: "Pratik",
+    fullName: "Pratik Verma",
     about: "A software engineer with a heart of gold. He loves photography, hiking, and making everyone smile.",
     image: "/images/groom.jpg"
   },
-  hashtag: "#PriyaWedsArjun",
+  hashtag: "#YashaswiWedsPratik",
   weddingDate: "2026-02-14",
   venue: {
     name: "The Grand Palace",
@@ -52,7 +52,7 @@ export const events = [
     time: "10:00 AM - 2:00 PM",
     venue: "The Royal Gardens",
     address: "The Grand Palace, Mumbai",
-    description: "The sacred celebration of love where Priya and Arjun unite in holy matrimony.",
+    description: "The sacred celebration of love where Yashaswi and Pratik unite in holy matrimony.",
     dressCode: "Traditional Wedding Attire",
     icon: "💍"
   },
@@ -82,7 +82,7 @@ export const friendsFamily = [
     id: 2,
     name: "Sneha Kapoor",
     relation: "Sister of Groom",
-    message: "So excited to welcome Priya to our family! You two are perfect together.",
+    message: "So excited to welcome Yashaswi to our family! You two are perfect together.",
     image: "/images/friends/friend2.jpg"
   },
   {
@@ -96,14 +96,14 @@ export const friendsFamily = [
     id: 4,
     name: "Ananya Desai",
     relation: "Maid of Honor",
-    message: "Priya, you deserve all the love and happiness. Can't wait to celebrate!",
+    message: "Yashaswi, you deserve all the love and happiness. Can't wait to celebrate!",
     image: "/images/friends/friend4.jpg"
   },
   {
     id: 5,
     name: "Karan Malhotra",
     relation: "Best Man",
-    message: "Arjun, you found your perfect match. Here's to a lifetime of joy!",
+    message: "Pratik, you found your perfect match. Here's to a lifetime of joy!",
     image: "/images/friends/friend5.jpg"
   },
   {
@@ -154,7 +154,7 @@ export const loveStory = [
     id: 4,
     title: "The Proposal",
     date: "December 2025",
-    description: "Under a starlit sky, Arjun got down on one knee. Priya said yes through happy tears.",
+    description: "Under a starlit sky, Pratik got down on one knee. Yashaswi said yes through happy tears.",
     icon: "💍"
   },
   {
